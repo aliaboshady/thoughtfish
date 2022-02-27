@@ -9,14 +9,16 @@ public class InteractiveButton : MonoBehaviour, IPointerEnterHandler, IPointerEx
     [SerializeField] float tooltipShowAfter = 0.5f;
     [SerializeField] string popupMessage;
 
+	float hoverTimePassed;
 	bool mouseIsHovering;
 	bool showTooltip;
-	float hoverTimePassed;
+	Vector3 lastPositionOnPress;
 
 	private void Update()
 	{
 		HandleMouseHoverTimer();
 		HandleTooltipVisibility();
+		if(Input.GetMouseButtonDown(0)) lastPositionOnPress = transform.position;
 	}
 
 	void HandleTooltipVisibility()
@@ -48,6 +50,8 @@ public class InteractiveButton : MonoBehaviour, IPointerEnterHandler, IPointerEx
 
 	public void OpenPopup()
 	{
+		if (lastPositionOnPress != transform.position) return;
+
 		Canvas canvas = FindObjectOfType<Canvas>();
 		if (canvas == null) return;
 
