@@ -1,11 +1,14 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
-public class ButtonBase : MonoBehaviour
+public class ButtonBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
 {
     [SerializeField] InteractiveButton[] interactiveButtons;
 
 	InteractiveButton interactiveButton;
 	int currentButtonIndex = 0;
+	bool mouseIsHovering;
+	Vector3 offset;
 
 	private void Start()
 	{
@@ -14,7 +17,17 @@ public class ButtonBase : MonoBehaviour
 
 	private void Update()
 	{
+		HandleMouseMovement();
 		HandleSwitchingButtons();
+	}
+
+	void HandleMouseMovement()
+	{
+		if(Input.GetMouseButtonDown(0)) offset = transform.position - Input.mousePosition;
+		if (Input.GetMouseButton(0) && mouseIsHovering)
+		{
+			transform.position = offset + Input.mousePosition;
+		}
 	}
 
 	void HandleSwitchingButtons()
@@ -25,5 +38,15 @@ public class ButtonBase : MonoBehaviour
 			if (++currentButtonIndex >= interactiveButtons.Length) currentButtonIndex = 0;
 			interactiveButton = Instantiate(interactiveButtons[currentButtonIndex], transform);
 		}
+	}
+
+	public void OnPointerEnter(PointerEventData eventData)
+	{
+		mouseIsHovering = true;
+	}
+
+	public void OnPointerExit(PointerEventData eventData)
+	{
+		mouseIsHovering = false;
 	}
 }
