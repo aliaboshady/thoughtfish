@@ -32,7 +32,7 @@ public class ButtonBase : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
 	void HandleSwitchingButtons()
 	{
-		if (Input.GetMouseButtonDown(1))
+		if (Input.GetMouseButtonDown(1) && mouseIsHovering)
 		{
 			if (interactiveButton != null) Destroy(interactiveButton.gameObject);
 			if (++currentButtonIndex >= interactiveButtons.Length) currentButtonIndex = 0;
