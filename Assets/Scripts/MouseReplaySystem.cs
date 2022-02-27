@@ -30,32 +30,29 @@ public class MouseReplaySystem : MonoBehaviour
 
 	private void Update()
 	{
-		HandleRecordReplayInput();
 		if (isInRecordMode) Record();
 		else if (isInReplayMode) Replay();
 	}
 
-	void HandleRecordReplayInput()
+	public void StartRecord()
 	{
-		if (Input.GetKey(KeyCode.A)) // Recording
-		{
-			isInRecordMode = true;
-			isInReplayMode = false;
-			replayIndex = 0;
-		}
-		if (Input.GetKey(KeyCode.D)) // Replaying
-		{
-			isInRecordMode = false;
-			isInReplayMode = true;
-		}
-		if (Input.GetKey(KeyCode.X)) // Cancel
-		{
-			Cancel();
-		}
-		if (Input.GetKey(KeyCode.C)) // Clear
-		{
-			mouseRecords.Clear();
-		}
+		isInRecordMode = true;
+		isInReplayMode = false;
+		replayIndex = 0;
+	}
+
+	public void StartReplay()
+	{
+		isInRecordMode = false;
+		isInReplayMode = true;
+		replayIndex = 0;
+	}
+
+	public void StopRecord()
+	{
+		isInRecordMode = false;
+		isInReplayMode = false;
+		replayIndex = 0;
 	}
 
 	void Record()
@@ -85,14 +82,7 @@ public class MouseReplaySystem : MonoBehaviour
 
 		if (++replayIndex >= mouseRecords.Count)
 		{
-			Cancel();
+			StopRecord();
 		}
-	}
-
-	void Cancel()
-	{
-		isInRecordMode = false;
-		isInReplayMode = false;
-		replayIndex = 0;
 	}
 }
