@@ -207,7 +207,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 94292818}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 94292820}
+        m_TargetAssemblyTypeName: InteractiveButton, Assembly-CSharp
+        m_MethodName: OpenPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &94292818
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -259,7 +271,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 1808767277}
+  popup: {fileID: 3120361603073038114, guid: 1c19d621ef3f7a94ead9fd14bdcd226f, type: 3}
   tooltipOffset: {x: 80, y: -60, z: 0}
+  tooltipShowAfter: 0.5
+  popupMessage: Pinky Popup
 --- !u!1 &252049214
 GameObject:
   m_ObjectHideFlags: 0
@@ -883,7 +898,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 990695828}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 990695830}
+        m_TargetAssemblyTypeName: InteractiveButton, Assembly-CSharp
+        m_MethodName: OpenPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &990695828
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,7 +962,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 3343857951409390951}
+  popup: {fileID: 3120361603073038114, guid: 1c19d621ef3f7a94ead9fd14bdcd226f, type: 3}
   tooltipOffset: {x: 80, y: -60, z: 0}
+  tooltipShowAfter: 0.5
+  popupMessage: Bluey Popup
 --- !u!1 &1311517870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1020,7 +1050,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1311517873}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1311517875}
+        m_TargetAssemblyTypeName: InteractiveButton, Assembly-CSharp
+        m_MethodName: OpenPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1311517873
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1072,7 +1114,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 599176701}
+  popup: {fileID: 3120361603073038114, guid: 1c19d621ef3f7a94ead9fd14bdcd226f, type: 3}
   tooltipOffset: {x: 80, y: -60, z: 0}
+  tooltipShowAfter: 0.5
+  popupMessage: Greeny Popup
 --- !u!1 &1743466602
 GameObject:
   m_ObjectHideFlags: 0
