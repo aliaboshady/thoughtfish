@@ -55,6 +55,11 @@ public class MouseReplaySystem : MonoBehaviour
 		replayIndex = 0;
 	}
 
+	public void ClearRecord()
+	{
+		mouseRecords.Clear();
+	}
+
 	void Record()
 	{
 		MouseRecord NewMouseRecord = new MouseRecord();
@@ -82,6 +87,7 @@ public class MouseReplaySystem : MonoBehaviour
 
 		if (++replayIndex >= mouseRecords.Count)
 		{
+			mouse_event(MOUSEEVENTF_LEFTUP, (uint)mouseX, (uint)mouseY, 0, 0);
 			StopRecord();
 		}
 	}

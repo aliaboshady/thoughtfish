@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -8,6 +9,11 @@ public class ReplaySystem : MonoBehaviour
     [SerializeField] InputField recordNameField;
     [SerializeField] Sprite StartRecordSprite;
     [SerializeField] Sprite StopRecordSprite;
+
+    public event Action OnStartRecord;
+    public event Action OnStoptRecord;
+    public event Action OnStartReplay;
+    public event Action OnClearRecord;
 
     MouseReplaySystem mouseReplaySystem;
     bool isRecording;
@@ -22,6 +28,7 @@ public class ReplaySystem : MonoBehaviour
         if (!isRecording)
 		{
             mouseReplaySystem.StartReplay();
+            OnStartReplay?.Invoke();
         }
     }
 
@@ -30,12 +37,16 @@ public class ReplaySystem : MonoBehaviour
         isRecording = !isRecording;
         if (isRecording)
 		{
+            mouseReplaySystem.ClearRecord();
+            OnClearRecord?.Invoke();
             mouseReplaySystem.StartRecord();
+            OnStartRecord?.Invoke();
             startStopRecordButton.image.sprite = StopRecordSprite;
         }
 		else
 		{
             mouseReplaySystem.StopRecord();
+            OnStoptRecord?.Invoke();
             startStopRecordButton.image.sprite = StartRecordSprite;
         }
     }
