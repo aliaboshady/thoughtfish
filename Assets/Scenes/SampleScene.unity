@@ -259,6 +259,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 1808767277}
+  tooltipOffset: {x: 80, y: -60, z: 0}
 --- !u!1 &252049214
 GameObject:
   m_ObjectHideFlags: 0
@@ -609,6 +610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1311517871}
     m_Modifications:
+    - target: {fileID: -3702245564903536668, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
+      propertyPath: content
+      value: I am Greeny
+      objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -639,11 +644,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -675,11 +680,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -930,6 +935,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 3343857951409390951}
+  tooltipOffset: {x: 80, y: -60, z: 0}
 --- !u!1 &1311517870
 GameObject:
   m_ObjectHideFlags: 0
@@ -1066,6 +1072,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tooltip: {fileID: 599176701}
+  tooltipOffset: {x: 80, y: -60, z: 0}
 --- !u!1 &1743466602
 GameObject:
   m_ObjectHideFlags: 0
@@ -1139,6 +1146,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 94292816}
     m_Modifications:
+    - target: {fileID: -3702245564903536668, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
+      propertyPath: content
+      value: I am Pinky
+      objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1169,11 +1180,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1205,11 +1216,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1252,6 +1263,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 990695826}
     m_Modifications:
+    - target: {fileID: -3702245564903536668, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
+      propertyPath: content
+      value: I am Bluey
+      objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -1282,11 +1297,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 200
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_SizeDelta.y
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1318,11 +1333,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1953426064990710714, guid: aa04a66497d35c849b30e34c9d3baa12, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
