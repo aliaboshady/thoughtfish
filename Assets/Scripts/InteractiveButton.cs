@@ -5,17 +5,21 @@ public class InteractiveButton : MonoBehaviour, IPointerEnterHandler, IPointerEx
 {
     [SerializeField] Tooltip tooltip;
     [SerializeField] Vector3 tooltipOffset;
+    [SerializeField] float tooltipShowAfter = 0.5f;
 
 	bool mouseIsHovering;
+	bool showTooltip;
+	float hoverTimePassed;
 
 	private void Update()
 	{
+		HandleMouseHoverTimer();
 		HandleTooltipVisibility();
 	}
 
 	void HandleTooltipVisibility()
 	{
-		if (mouseIsHovering)
+		if (showTooltip)
 		{
 			tooltip.gameObject.SetActive(true);
 			tooltip.transform.position = Input.mousePosition + tooltipOffset;
@@ -23,6 +27,20 @@ public class InteractiveButton : MonoBehaviour, IPointerEnterHandler, IPointerEx
 		else
 		{
 			tooltip.gameObject.SetActive(false);
+		}
+	}
+
+	void HandleMouseHoverTimer()
+	{
+		if (mouseIsHovering)
+		{
+			hoverTimePassed += Time.deltaTime;
+			if (hoverTimePassed > tooltipShowAfter) showTooltip = true;
+		}
+		else
+		{
+			hoverTimePassed = 0;
+			showTooltip = false;
 		}
 	}
 
